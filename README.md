@@ -19,3 +19,6 @@ npm install -g rimraf, mkdirp, ncp
 # mkdirp - create directory, eq: mldir
 # ncp - copy directory, eq: cp
 ```
+
+souces: \
+https://dev.to/eckhardtd/how-to-host-a-sapper-js-ssr-app-on-firebase-hmb
