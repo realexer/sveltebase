@@ -73,3 +73,6 @@ yarn-error.log
 .idea/
 
 /functions/__sapper__/
+/src/_local/
+/src/_config/prod/
+/src/_config/local/

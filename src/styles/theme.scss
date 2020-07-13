@@ -1,0 +1,28 @@
+$body_bg: #2b2b3d;
+$color: #fafafa;
+$nav_color: #3b3843;
+$footer_color: #3b3843;
+$link_color: #d9946c;
+
+body {
+  color: $color;
+  background: $body_bg;
+
+  a {
+    color: $link_color;
+  }
+
+  main {
+    min-height: 70vh;
+  }
+
+  nav {
+    background-color: $nav_color;
+  }
+
+  footer,
+  .page-footer
+  {
+    background-color: $footer_color;
+  }
+}
