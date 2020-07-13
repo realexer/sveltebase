@@ -22,6 +22,9 @@ const availableLangs = Multilang.getSupportedLanguages();
 					<p><a href="/{key}/" rel="external">{availableLangs[key]}</a></p>
 				{/each}
 			</div>
+			<div class="col m4 s12">
+				<p>&copy; sapperbase.com</p>
+			</div>
 		</div>
 	</div>
 	<p>&nbsp;</p>
