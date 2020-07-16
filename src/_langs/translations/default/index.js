@@ -2,6 +2,16 @@ const main = {
 	general: {
 		name: "SapperBase",
 	},
+	meta: {
+		index: {
+			title: "SapperBase",
+			description: "",
+		},
+		about: {
+			title: "About",
+			description: ""
+		}
+	},
 	layout: {
 		nav: {
 			links: {

@@ -4,7 +4,7 @@ import Lang from "sickspack/multilang/Lang.svelte";
 import Metadata from "../../../app/components/general/Metadata.svelte";
 </script>
 
-<title><Metadata page="about"/></title>
+<Metadata page="about"/>
 
 <div class="container center-align">
 	<h1 class=""><Lang key="page.about.heading"/></h1>
