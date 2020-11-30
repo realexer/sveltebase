@@ -2,7 +2,8 @@ import local from './_config/local/env';
 
 const env =
 {
-	baseUrl: '',
+	domain: 'sapperbase.com',
+	baseUrl: `https://sapperbase.com`,
 	default_lang: 'en'
 };
 

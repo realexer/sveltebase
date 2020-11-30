@@ -1,1 +1,50 @@
-export default {"general":{"name":"SapperBase"},"layout":{"nav":{"links":{"home":{"text":"SB","title":"SapperBase"},"about":{"text":"acerca de","title":"Lea sobre SapperBase."}}},"footer":{"info":{"heading":"Informacion","links":{"about":"Sobre proyecto"}},"languages":{"heading":"Idiomas"}}},"page":{"index":{"heading":"Base de zapador","description":"Sapper & Firebase placa de caldera."},"about":{"heading":"Sobre SB","description":"Sapper & Firebase es como la mantequilla de maní y la gelatina."}}}
+export default {
+	"general": {
+		"name": "SapperBase"
+	},
+	"meta": {
+		"index": {
+			"title": "SapperBase",
+			"description": ""
+		},
+		"about": {
+			"title": "Acerca de",
+			"description": ""
+		}
+	},
+	"layout": {
+		"nav": {
+			"links": {
+				"home": {
+					"text": "SB",
+					"title": "SapperBase"
+				},
+				"about": {
+					"text": "acerca de",
+					"title": "Lee sobre SapperBase."
+				}
+			}
+		},
+		"footer": {
+			"info": {
+				"heading": "información",
+				"links": {
+					"about": "sobre el proyecto"
+				}
+			},
+			"languages": {
+				"heading": "idiomas"
+			}
+		}
+	},
+	"page": {
+		"index": {
+			"heading": "Base de zapadores",
+			"description": "Sapper y Firebase caldera de la placa."
+		},
+		"about": {
+			"heading": "sobre SB",
+			"description": "Sapper y Firebase es como la mantequilla de maní y jalea."
+		}
+	}
+}

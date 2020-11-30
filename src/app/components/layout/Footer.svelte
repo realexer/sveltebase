@@ -3,6 +3,7 @@
 import Multilang from "sickspack/multilang";
 import Lang from 'sickspack/multilang/Lang.svelte';
 import {lang_url} from "../general/lang_url";
+import env from "../../../env";
 
 const availableLangs = Multilang.getSupportedLanguages();
 
@@ -23,7 +24,7 @@ const availableLangs = Multilang.getSupportedLanguages();
 				{/each}
 			</div>
 			<div class="col m4 s12">
-				<p>&copy; sapperbase.com</p>
+				<p>&copy; {env.domain}</p>
 			</div>
 		</div>
 	</div>
