@@ -1,6 +1,7 @@
+import env from '../env';
 import langs from '../_langs';
 import Multilang from "sickspack/multilang";
-import {addFormat} from 'sickspack/multilang/lang'
+import {addFormat, addDefaultData} from 'sickspack/multilang/lang'
 
 const init = () =>
 {
@@ -8,7 +9,12 @@ const init = () =>
 
 	addFormat(/\*\*([^*]+)\*\*/gmi, `<strong class='__txt_highlight'>$1</strong>`);
 	addFormat(/\*([^\*]+)\*/gmi, `<strong>$1</strong>`);
-	addFormat(/\n/gmi, `<p>`);
+
+	addDefaultData("xbrand", env.name);
+	addDefaultData("xdomain", env.domain);
+	addDefaultData("xdomainbrand", env.domain_brand);
+	addDefaultData("xbrandlink", `<a href='/'>${env.name}</a>`);
+	addDefaultData("xemaillink", `<a href='mailto:${env.contacts.email}'>${env.contacts.email}</a>`);
 };
 
 export {init};
