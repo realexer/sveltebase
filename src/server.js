@@ -3,6 +3,7 @@ import compression from 'compression';
 import * as sapper from '@sapper/server';
 import {redirector} from "./redirects";
 import bodyParser from 'body-parser';
+import {cacher} from "./caching";
 
 const { PORT, NODE_ENV } = process.env;
 const dev = NODE_ENV === 'development';
@@ -18,6 +19,7 @@ if(dev) {
 }
 
 app.use(redirector);
+app.use(cacher);
 
 app.use(sapper.middleware());
 
