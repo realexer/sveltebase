@@ -22,3 +22,9 @@ npm install -g rimraf, mkdirp, ncp
 
 souces: \
 https://dev.to/eckhardtd/how-to-host-a-sapper-js-ssr-app-on-firebase-hmb
+
+#Usage
+* Update robots.txt
+* Update manifest.json
+* Change favicon
+* Update env.js
