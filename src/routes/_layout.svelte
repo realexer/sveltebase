@@ -13,6 +13,8 @@ export async function preload(page, session)
 	const langMatch = page.path.match(/\/(?<lang>[\w]+)\/?/);
 	const lang = langMatch ? langMatch.groups.lang : env.default_lang;
 
+	const canonical_url = `${env.baseUrl}${page.path}`;
+
 	if(page.path === '/') {
 		page.path = `/${env.default_lang}/`;
 	}
@@ -25,18 +27,21 @@ export async function preload(page, session)
 
 	return {
 		lang: lang,
-		page: page
+		page: page,
+		page_url: canonical_url,
 	};
 }
 </script>
 <script>
-	import Nav from '../app/components/layout/Nav.svelte';
-	import Footer from '../app/components/layout/Footer.svelte';
+import Canonical from '../app/components/general/Canonical.svelte';
+import Nav from '../app/components/layout/Nav.svelte';
+import Footer from '../app/components/layout/Footer.svelte';
 
-	export let lang;
-	export let page;
+export let lang;
+export let page;
+export let page_url;
 
-	Multilang.init(lang);
+Multilang.init(lang);
 
 </script>
 
@@ -48,6 +53,8 @@ export async function preload(page, session)
 		<link rel="alternate" hreflang="x-default" href="{env.baseUrl}{replaceUrlLang(page.path, lang, env.default_lang)}" />
 	{/if}
 </svelte:head>
+
+<Canonical url="{page_url}"/>
 
 <style global src='../styles/theme.scss'></style>
 
