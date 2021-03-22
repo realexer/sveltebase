@@ -34,6 +34,7 @@ export async function preload(page, session)
 </script>
 <script>
 import Canonical from '../app/components/general/Canonical.svelte';
+import GoogleAnalytics from '../app/components/lib/GoogleAnalytics.svelte';
 import Nav from '../app/components/layout/Nav.svelte';
 import Footer from '../app/components/layout/Footer.svelte';
 
@@ -55,6 +56,7 @@ Multilang.init(lang);
 </svelte:head>
 
 <Canonical url="{page_url}"/>
+<GoogleAnalytics gtag_id=""/>
 
 <style global src='../styles/theme.scss'></style>
 
