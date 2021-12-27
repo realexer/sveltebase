@@ -76,3 +76,6 @@ yarn-error.log
 /src/_local/
 /src/_config/prod/
 /src/_config/local/
+
+# don't make rules public.
+firestore.rules
