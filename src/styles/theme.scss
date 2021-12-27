@@ -27,6 +27,25 @@ body {
   }
 }
 
+body .card
+{
+  background: $nav_color;
+
+  h2 {
+    margin: 0;
+    margin-bottom: 0.5rem;
+  }
+}
+
+body form
+{
+  .input-field input[type=text],
+  .input-field textarea
+  {
+    color: $text_color;
+  }
+}
+
 /* material SEO optimization */
 body {
   .material-icons::before {

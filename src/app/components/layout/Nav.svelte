@@ -24,6 +24,11 @@ const { page } = stores();
 					<span><Lang key="layout.nav.links.about.text"/></span>
 				</a>
 			</li>
+			<li class:active="{$page.path == lang_url('changelog')}">
+				<a href="{lang_url('changelog')}" title="{_lang('layout.nav.links.changelog.title')}">
+					<span><Lang key="layout.nav.links.changelog.text"/></span>
+				</a>
+			</li>
 		</ul>
 	</div>
 </nav>

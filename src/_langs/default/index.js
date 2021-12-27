@@ -10,7 +10,11 @@ const main = {
 		about: {
 			title: "About",
 			description: ""
-		}
+		},
+		changelog: {
+			title: "Changelog",
+			description: ""
+		},
 	},
 	layout: {
 		nav: {
@@ -23,6 +27,10 @@ const main = {
 					text: "about",
 					title: "Read about SapperBase.",
 				},
+				changelog: {
+					text: "changelog",
+					title: "Versions history.",
+				},
 			}
 		},
 		footer: {
@@ -30,6 +38,7 @@ const main = {
 				heading: 'Info',
 				links: {
 					about: 'About project',
+					changelog: 'Changelog',
 				}
 			},
 			languages: {
@@ -101,7 +110,23 @@ const main = {
 		about: {
 			heading: "About SB",
 			description: "Sapper & Firebase is like the peanut butter and jelly."
-		}
+		},
+		changelog: {
+			heading: "Changelog",
+			description: `SapperBase is just a concept and enthusiasm based boilerplate that is not meant for commercial usage. 
+										However, if you are confident that you can successfully built a reliable and stable application using SapperBase
+										 - there's no restrictions or permissions you need to obtain to use it.`,
+
+			changes_list: {
+				heading: "Latest changes",
+			},
+			changelog_form: {
+				inputs: {
+					version: "Version",
+					details: "Details",
+				},
+			},
+		},
 	}
 };
 

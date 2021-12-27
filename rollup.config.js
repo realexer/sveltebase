@@ -21,11 +21,14 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				preventAssignment: true,
 			}),
 			svelte({
-				dev,
-				hydratable: true,
+				compilerOptions: {
+					dev,
+					hydratable: true,
+				},
 				emitCss: true,
 				preprocess: autoPreprocess({
 					postcss: true
@@ -69,11 +72,15 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': false,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				preventAssignment: true,
 			}),
 			svelte({
-				generate: 'ssr',
-				dev
+				compilerOptions: {
+					dev,
+					generate: 'ssr',
+					hydratable: true
+				},
 			}),
 			resolve({
 				dedupe: ['svelte']
@@ -95,7 +102,8 @@ export default {
 			resolve(),
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
+				preventAssignment: true,
 			}),
 			commonjs(),
 			!dev && terser()
