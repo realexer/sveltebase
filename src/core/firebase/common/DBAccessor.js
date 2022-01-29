@@ -30,7 +30,7 @@ class DBAccessor
 	}
 
 	changelog(lang) {
-		return this.Firestore.collection(`changelog/${lang}/records`).withConverter(ChangelogModel.getConverter());
+		return this.Firestore.collection(`changelog`).withConverter(ChangelogModel.getConverter());
 	}
 }
 

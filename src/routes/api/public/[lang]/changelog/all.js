@@ -1,4 +1,4 @@
-import {ChangelogService} from "../../../core/services/ChangelogService";
+import {ChangelogService} from "../../../../../core/services/ChangelogService";
 
 export async function get(req, res)
 {

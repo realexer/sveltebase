@@ -1,20 +1,21 @@
 import {FirebaseConverter, FirebaseModel} from "./base/FirebaseModel";
+import {FirebaseTranslatableModel} from "./base/FirebaseTranslatableModel";
 
-class ChangelogModel extends FirebaseModel
+class ChangelogModel extends FirebaseTranslatableModel
 {
   constructor(data = {}, id = null)
   {
     super(data, id);
   }
 
-  get headline()
+  headline(lang)
   {
-    return this.data.headline;
+    return this.getTranslation(lang).headline;
   }
 
-  get details()
+  details(lang)
   {
-    return this.data.details;
+    return this.getTranslation(lang).details;
   }
 
   get version()
