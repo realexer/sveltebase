@@ -24,7 +24,7 @@ class ChangelogService
 
 			const result = await dbAccessorAdmin.changelog().add(record);
 
-			return (await ChangelogService.getRecord(result.id)).data().toCompleteObject();
+			return (await ChangelogService.getRecord(result.id)).data();
 		});
 	};
 
@@ -37,7 +37,7 @@ class ChangelogService
 	{
 		const result = await dbAccessorAdmin.changelog().doc(record.id).set(record);
 
-		return (await ChangelogService.getRecord(record.id)).data().toCompleteObject();
+		return (await ChangelogService.getRecord(record.id)).data();
 	}
 
 	/**

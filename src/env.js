@@ -8,6 +8,7 @@ const env =
 	domain: 'sapperbase.com',
 	baseUrl: `https://sapperbase.com`,
 	default_lang: 'en',
+	translations: ['es'],
 	contacts: {
 		email: "contact@sapperbase.com",
 	},
@@ -17,6 +18,9 @@ const env =
 	admin: {
 		secret: null,
 	},
+	googleTranslate: {
+		apiKey: null,
+	}
 };
 
 export default Object.assign({}, env, local, prod);

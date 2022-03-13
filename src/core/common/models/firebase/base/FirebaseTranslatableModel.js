@@ -26,6 +26,22 @@ class FirebaseTranslatableModel extends FirebaseModel
 
 		return translation;
 	}
+
+	hasTranslation(lang)
+	{
+		return this.data.translations[lang] != null;
+	}
+
+	needsTranslations(langs)
+	{
+		for(let translateToLang of langs)
+		{
+			if(!this.hasTranslation(translateToLang))
+				return true;
+		}
+
+		return false;
+	}
 }
 
 export {FirebaseTranslatableModel};
