@@ -1,7 +1,7 @@
 {
-  "name": "TODO",
-  "description": "TODO",
-  "version": "0.0.1",
+  "name": "sveltebase",
+  "description": "Svelte/Sapper & Firebase boilerplate.",
+  "version": "0.0.2",
   "scripts": {
     "dev": "sapper dev --live=false",
     "prebuild-nix": "rm -rf functions/__sapper__/build && mkdir -p functions/__sapper__/build",

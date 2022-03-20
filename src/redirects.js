@@ -1,22 +1,37 @@
+import env from "./env";
+
 export const redirector = (req, res, next) =>
 {
 	const rules = [
-		[/^\/(en)\/?$/, '/'],
-		//[/^\/(?<lang>[a-z]{2})\/not_found?$/, '/{lang}/not_found_new'], // example
+		[/^\/?$/, `/${env.default_lang}/`],
+		[/^\/(?<lang>[a-z]{2})$/, `/{lang}/`],
 	];
 
 	for(let [condition, redirect] of rules)
 	{
 		const match = req.path.match(condition);
-		if (match) {
+
+		if (match)
+		{
+			if(typeof redirect == "function") {
+				redirect = redirect(match);
+			}
+
 			let redirectUrl = req.path.replace(condition, redirect);
 
 			for (let group in match.groups) {
 				redirectUrl = redirectUrl.replace(`{${group}}`, match.groups[group]);
 			}
 
-			res.redirect(301, redirectUrl);
-			return;
+			if(req.path != redirectUrl)
+			{
+				if(redirectUrl == 404) {
+					res.redirect(301, '/not_found');
+				} else {
+					res.redirect(301, redirectUrl);
+				}
+				return;
+			}
 		}
 	}
 

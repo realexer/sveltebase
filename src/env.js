@@ -3,14 +3,14 @@ import prod from './_config/prod/env';
 
 const env =
 {
-	name: "SapperBase",
-	domain_brand: 'SapperBase.com',
-	domain: 'sapperbase.com',
-	baseUrl: `https://sapperbase.com`,
+	name: "SvelteBase",
+	domain_brand: 'SvelteBase.com',
+	domain: 'sveltebase.com',
+	baseUrl: `https://sveltebase.com`,
 	default_lang: 'en',
 	translations: ['es'],
 	contacts: {
-		email: "contact@sapperbase.com",
+		email: "contact@sveltebase.com",
 	},
 	dev: {
 		use_emulators: false,

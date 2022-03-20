@@ -1,7 +1,4 @@
 export default {
-	"general": {
-		"name": "SapperBase"
-	},
 	"meta": {
 		"index": {
 			"title": "SapperBase",

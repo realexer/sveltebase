@@ -11,6 +11,7 @@ const init = () =>
 	addFormat(/\*([^\*]+)\*/gmi, `<strong>$1</strong>`);
 
 	addDefaultData("xbrand", env.name);
+	addDefaultData("xprojectname", env.name);
 	addDefaultData("xdomain", env.domain);
 	addDefaultData("xdomainbrand", env.domain_brand);
 	addDefaultData("xbrandlink", `<a href='/'>${env.name}</a>`);

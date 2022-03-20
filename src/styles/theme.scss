@@ -1,12 +1,44 @@
+$bg_color: #3f3f78;
+$bg_text_color: #fafafa;
+
+$read_bg_color: #fff9ee;
+$read_text_color: #272732;
+$read_link_color: #3e7ac7;
+
 $body_bg: #2b2b3d;
 $text_color: #fafafa;
 $nav_color: #3b3843;
 $footer_color: #3b3843;
 $link_color: #d9946c;
 
+.bg_text {
+  color: $bg_text_color;
+}
+
+.bg_item {
+  @extend .bg_text;
+  background: $bg_color;
+}
+
+.read_text {
+  color: $read_text_color;
+}
+
+.read_link {
+  color: $read_link_color;
+}
+
+.read_item {
+  @extend .read_text;
+  background: $read_bg_color;
+
+  a {
+    @extend .read_link;
+  }
+}
+
 body {
-  color: $text_color;
-  background: $body_bg;
+  @extend .bg_item;
 
   a {
     color: $link_color;
@@ -17,32 +49,63 @@ body {
   }
 
   nav {
-    background-color: $nav_color;
+    @extend .read_item;
+    .brand-logo {
+      @extend .read_text;
+    }
+    ul a {
+      @extend .read_text;
+    }
   }
 
   footer,
   .page-footer
   {
-    background-color: $footer_color;
+    @extend .read_item;
+    padding-bottom: 1em;
   }
-}
 
-body .card
-{
-  background: $nav_color;
+  h1 {
+    font-size: 4.5em;
+  }
 
   h2 {
-    margin: 0;
-    margin-bottom: 0.5rem;
+    font-size: 3.2em;
+  }
+
+  h3 {
+    font-size: 1.8em;
   }
 }
+
+body
+{
+  .card,
+  .card-panel {
+    @extend .read_item;
+
+    .card-content {
+      background: transparent;
+    }
+
+    .card-action {
+      a:not(.btn):not(.btn-large):not(.btn-small):not(.btn-large):not(.btn-floating)
+      {
+        border-bottom: 1px dashed;
+        padding-bottom: 0.2rem;
+      }
+    }
+  }
+
+}
+
 
 body form
 {
   .input-field input[type=text],
   .input-field textarea
   {
-    color: $text_color;
+
   }
 }
 
@@ -50,5 +113,19 @@ body form
 body {
   .material-icons::before {
     content: attr(data-icon);
+  }
+}
+
+.index-page {
+  h2 {
+    padding-bottom: 0.5em;
+    border-bottom: 1px solid;
+  }
+
+  .card-panel{
+    text-align: left;
+    br {
+      margin-bottom: 1em;
+    }
   }
 }

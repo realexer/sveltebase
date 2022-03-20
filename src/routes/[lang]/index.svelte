@@ -6,10 +6,64 @@ import Metadata from "../../app/components/general/Metadata.svelte";
 
 <Metadata page="index"/>
 
-<div class="container center-align">
-	<h1 class=""><Lang key="page.index.heading"/></h1>
-</div>
-<div class="divider"></div>
-<div class="container center-align">
-	<p class="flow-text"><Lang key="page.index.description"/></p>
+<div class="index-page">
+	<section class="container center-align">
+		<h1 class=""><Lang key="page.index.intro.heading"/></h1>
+		<p class="flow-text"><Lang key="page.index.intro.description"/></p>
+		<div class="card-panel">
+			<p class="flow-text"><Lang key="page.index.intro.content"/></p>
+		</div>
+	</section>
+
+	<section class="container center-align">
+		<h2><Lang key="page.index.sections.features.heading"/></h2>
+
+		<div class="row">
+			{#each Object.values(_lang('page.index.sections.features.items')) as item, i}
+				{#if (i > 0 && i % 2 == 0)}
+					<div class="row"></div>
+				{/if}
+				<div class="col l6 s12">
+					<h3>{item.heading}</h3>
+					<div class="card-panel">
+						<p class="flow-text">{@html item.description}</p>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</section>
+	<section class="container center-align">
+		<h2><Lang key="page.index.sections.drawbacks.heading"/></h2>
+
+		<div class="row">
+			{#each Object.values(_lang('page.index.sections.drawbacks.items')) as item, i}
+				{#if (i > 0 && i % 2 == 0)}
+					<div class="row"></div>
+				{/if}
+				<div class="col l6 s12">
+					<h3>{item.heading}</h3>
+					<div class="card-panel">
+						<p class="flow-text">{@html item.description}</p>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</section>
+	<section class="container center-align">
+		<h2><Lang key="page.index.sections.firebase_downsides.heading"/></h2>
+
+		<div class="row">
+			{#each Object.values(_lang('page.index.sections.firebase_downsides.items')) as item, i}
+				{#if (i > 0 && i % 2 == 0)}
+					<div class="row"></div>
+				{/if}
+				<div class="col l6 s12">
+					<h3>{item.heading}</h3>
+					<div class="card-panel">
+						<p class="flow-text">{@html item.description}</p>
+					</div>
+				</div>
+			{/each}
+		</div>
+	</section>
 </div>
