@@ -19,14 +19,16 @@ import Metadata from "../../app/components/general/Metadata.svelte";
 		<h2><Lang key="page.index.sections.features.heading"/></h2>
 
 		<div class="row">
-			{#each Object.values(_lang('page.index.sections.features.items')) as item, i}
+			{#each Object.keys(_lang('page.index.sections.features.items')) as item, i}
 				{#if (i > 0 && i % 2 == 0)}
 					<div class="row"></div>
 				{/if}
 				<div class="col l6 s12">
-					<h3>{item.heading}</h3>
+					<h3><Lang key="page.index.sections.features.items.{item}.heading"/></h3>
 					<div class="card-panel">
-						<p class="flow-text">{@html item.description}</p>
+						<div class="flow-text">
+							<Lang key="page.index.sections.features.items.{item}.description"/>
+						</div>
 					</div>
 				</div>
 			{/each}
@@ -36,14 +38,16 @@ import Metadata from "../../app/components/general/Metadata.svelte";
 		<h2><Lang key="page.index.sections.drawbacks.heading"/></h2>
 
 		<div class="row">
-			{#each Object.values(_lang('page.index.sections.drawbacks.items')) as item, i}
+			{#each Object.keys(_lang('page.index.sections.drawbacks.items')) as item, i}
 				{#if (i > 0 && i % 2 == 0)}
 					<div class="row"></div>
 				{/if}
 				<div class="col l6 s12">
-					<h3>{item.heading}</h3>
+					<h3><Lang key="page.index.sections.drawbacks.items.{item}.heading"/></h3>
 					<div class="card-panel">
-						<p class="flow-text">{@html item.description}</p>
+						<div class="flow-text">
+							<Lang key="page.index.sections.drawbacks.items.{item}.description"/>
+						</div>
 					</div>
 				</div>
 			{/each}
@@ -53,14 +57,16 @@ import Metadata from "../../app/components/general/Metadata.svelte";
 		<h2><Lang key="page.index.sections.firebase_downsides.heading"/></h2>
 
 		<div class="row">
-			{#each Object.values(_lang('page.index.sections.firebase_downsides.items')) as item, i}
+			{#each Object.keys(_lang('page.index.sections.firebase_downsides.items')) as item, i}
 				{#if (i > 0 && i % 2 == 0)}
 					<div class="row"></div>
 				{/if}
 				<div class="col l6 s12">
-					<h3>{item.heading}</h3>
+					<h3><Lang key="page.index.sections.firebase_downsides.items.{item}.heading"/></h3>
 					<div class="card-panel">
-						<p class="flow-text">{@html item.description}</p>
+						<div class="flow-text">
+							<Lang key="page.index.sections.firebase_downsides.items.{item}.description"/>
+						</div>
 					</div>
 				</div>
 			{/each}
