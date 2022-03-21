@@ -17,6 +17,10 @@ const availableLangs = Multilang.getSupportedLanguages();
 				<p><a href="{lang_url('info/about')}"><Lang key="layout.footer.info.links.about"/></a></p>
 				<p><a href="{lang_url('info/showcase')}"><Lang key="layout.footer.info.links.showcase"/></a></p>
 				<p><a href="{lang_url('changelog')}"><Lang key="layout.footer.info.links.changelog"/></a></p>
+				<p>&nbsp;</p>
+				<p>
+					Powered by <a href="https://sveltebase.com">SvelteBase</a>
+				</p>
 			</div>
 
 			<div class="col m4 s12">

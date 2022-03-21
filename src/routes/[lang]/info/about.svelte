@@ -9,6 +9,11 @@ import Metadata from "../../../app/components/general/Metadata.svelte";
 <section class="container center-align">
 	<h1 class=""><Lang key="page.info.about.heading"/></h1>
 	<p class="flow-text"><Lang key="page.info.about.description"/></p>
+	<div class="card-panel">
+		<p class="flow-text">
+			GitHub <a href="https://github.com/realexer/sveltebase" target="_blank">github.com/realexer/sveltebase</a>
+		</p>
+	</div>
 </section>
 
 <div class="divider"></div>
