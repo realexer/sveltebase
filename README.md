@@ -1,6 +1,18 @@
-##SvelteBase
-Live preview: [sveltebase.com](https://sveltebase.com)
+##SvelteBase - Svelte + Sapper + Firebase = ❤
 
+A simple lightweight boilerplate designed to make website development 
+easy, elegant and fun.
+
+Websites built with SvelteBase can be characterized by next things:
+* quick to load and highly responsive
+* lightweight, less code to write - less code to manage
+* multi-language support and easy to use
+* fun to develop and inspiring to build new websites
+
+###Live preview: [sveltebase.com](https://sveltebase.com)
+
+---
+##Brief Introduction
 ### Node debug configuration
 
 JavaScript file: ```node_modules\sapper\dist\cli.js``` \
