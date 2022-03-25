@@ -12,6 +12,8 @@ export async function get(req, res)
 	const urls = [
 		new SitemapPageMetadata(env.baseUrl,`/_lang_/`, 1.0, ChangeFreq.always),
 		new SitemapPageMetadata(env.baseUrl,`/_lang_/info/about`, 0.6, ChangeFreq.weekly),
+		new SitemapPageMetadata(env.baseUrl,`/_lang_/info/showcase`, 0.6, ChangeFreq.weekly),
+		new SitemapPageMetadata(env.baseUrl,`/_lang_/changelog`, 0.6, ChangeFreq.weekly),
 	];
 
 	const pages = [];
