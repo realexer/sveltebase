@@ -1,4 +1,9 @@
 export const projects = {
+	"svitanok": {
+		id: "svitanok",
+		name: "Svitanok App",
+		website: "https://svitanok.app",
+	},
 	"strangy": {
 		id: "strangy",
 		name: "Strangy",

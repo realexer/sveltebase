@@ -1,5 +1,7 @@
 import es from './es';
+import uk from './uk';
 
 export default {
-	es: es
+	es: es,
+	uk: uk
 };

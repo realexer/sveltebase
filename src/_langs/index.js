@@ -12,4 +12,5 @@ const applyOverrides = (lang, custom = {}) =>
 export default {
 	en: applyOverrides(en, {}),
 	es: applyOverrides(translations.es),
+	uk: applyOverrides(translations.uk)
 }

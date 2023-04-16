@@ -8,8 +8,10 @@ import Metadata from "../../app/components/general/Metadata.svelte";
 
 <div class="index-page">
 	<section class="container center-align">
-		<h1 class=""><Lang key="page.index.intro.heading"/></h1>
-		<p class="flow-text"><Lang key="page.index.intro.description"/></p>
+		<div class="big-heading">
+			<h1 class=""><Lang key="page.index.intro.heading"/></h1>
+			<p class="flow-text subheading"><Lang key="page.index.intro.description"/></p>
+		</div>
 		<div class="card-panel">
 			<p class="flow-text"><Lang key="page.index.intro.content"/></p>
 		</div>

@@ -145,6 +145,9 @@ export default {
 						},
 						"hotauto": {
 							"description": "Un proyecto SEO simple para la venta de autos usados."
+						},
+						"svitanok": {
+							"description": "Una aplicación donde puedes encontrar a cualquier profesional individual, crear citas y dejar comentarios sobre las visitas."
 						}
 					}
 				}

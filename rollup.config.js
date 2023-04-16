@@ -3,16 +3,21 @@ import replace from '@rollup/plugin-replace';
 import commonjs from '@rollup/plugin-commonjs';
 import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
-import { terser } from 'rollup-plugin-terser';
+import terser from '@rollup/plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import autoPreprocess from 'svelte-preprocess';
+import sveltePreprocessSass from 'svelte-preprocess-sass';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
 const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) => (warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) || onwarn(warning);
+
+const preprocess = {
+	style: sveltePreprocessSass.sass(),
+};
 
 export default {
 	client: {
@@ -79,7 +84,7 @@ export default {
 				compilerOptions: {
 					dev,
 					generate: 'ssr',
-					hydratable: true
+					hydratable: true,
 				},
 			}),
 			resolve({
@@ -94,22 +99,4 @@ export default {
 		preserveEntrySignatures: 'strict',
 		onwarn,
 	},
-
-	serviceworker: {
-		input: config.serviceworker.input(),
-		output: config.serviceworker.output(),
-		plugins: [
-			resolve(),
-			replace({
-				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode),
-				preventAssignment: true,
-			}),
-			commonjs(),
-			!dev && terser()
-		],
-
-		preserveEntrySignatures: false,
-		onwarn,
-	}
 };

@@ -10,6 +10,9 @@ Websites built with SvelteBase can be characterized by next things:
 * fun to develop and inspiring to build new websites
 
 ### Live preview: [sveltebase.com](https://sveltebase.com)
+### Examples: 
+[Svitanok App](https://svitanok.app) - an app where you can find any individual specialists
+[Strangy](https://strangy.com) - find someone to talk to online
 
 ---
 ## Brief Introduction

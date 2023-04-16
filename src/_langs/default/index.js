@@ -3,8 +3,8 @@ import {projects} from "../../data/projects";
 const main = {
 	meta: {
 		index: {
-			title: "_XPROJECTNAME_ = Svelte + Sapper + Firebase = ❤",
-			description: "Simple, reliable, highly-customizable platform for building hyper-reactive and ultra user-friendly modern mobile application.",
+			title: "_XPROJECTNAME_ - Svelte/SSR + Firebase boilerplate",
+			description: "Simple, reliable, flexible platform for building hyper-reactive and ultra user-friendly modern mobile application.",
 		},
 		info: {
 			about: {
@@ -60,7 +60,7 @@ const main = {
 		index: {
 			intro: {
 				heading: "_XPROJECTNAME_",
-				description: "Sapper & Firebase boilerplate.",
+				description: "Svelte + Sapper + Firebase = ❤",
 				content: `_XPROJECTNAME_ is a hobby project that was started few years ago with a goal - 
 									to create a lightweight simple and modern web framework that would make prototyping and development of web projects of any scale easy and fun, 
 									while leveraging the best out of modern tools and following simple and intuitive practices that ignite both 
@@ -173,6 +173,9 @@ const main = {
 						website: "website",
 					},
 					list: {
+						[projects.svitanok.id]: {
+							description: "An app where you can find any individual professional, create appointments and leave feedback about the visits.",
+						},
 						[projects.strangy.id]: {
 							description: "A platform for free and open communication.",
 						},
